@@ -1,0 +1,26 @@
+***************************
+videoOrientationDetector.py
+***************************
+
+This tool "videoOrientationDetector.py" aims to detect videos Orientation.
+This tool use "face detection algorithm" possibly present in your video. Best
+detection require also some faces of persons in your video.  
+Enjoy ! (if it work ! :-D, for my videos, it work fine)
+
+Required : Python, Numpy, OpenCV
+
+    # sudo apt-get install python-numpy python-opencv
+
+Example of use for convertion to MP4 video :
+
+     orientation=$(./videoOrientationDetector.py video.mov)
+     ffmpeg -y -i video.mov -threads 4 -acodec libfaac -vcodec libx264 -b:v 600k $orientation videoWithGoodOrientation.tmp
+     qt-faststart videoWithGoodOrientation.tmp videoWithGoodOrientation.mp4
+
+To remove output : ./videoOrientationDetector.py 2> /dev/null or ./videoOrientationDetector.py -Q
+
+Pascal Pucci <Pascal.Pucci@Pascalou.org>
+http://www.pascalou.org
+
+
+# videoOrientationDetector.py  Copyright (C) 2012  Pascal Pucci <pascal.pucci@pascalou.org>
