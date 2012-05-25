@@ -50,13 +50,6 @@ haar_scale = 1.2
 min_neighbors = 2
 haar_flags = 0
 
-
-def rotateImage(image, angle):
-  image_center = tuple(np.array(image.shape)/2)
-  rot_mat = cv.getRotationMatrix2D(image_center,angle,1.0)
-  result = cv.warpAffine(image, rot_mat, image.shape,flags=cv.INTER_LINEAR)
-  return result
-
 def searchForm(haar,formregion,winform,color=0,firstonly=0,view=0):
     
     if not color:
@@ -218,7 +211,6 @@ class Detect(threading.Thread):
 
 	    #sys.stderr.write("> %s %i\n" % (self.rot, self.score))
 
-
     def stop(self):
         self.Terminated = True
 
@@ -356,7 +348,7 @@ if __name__ == '__main__':
 	elapsed = (time.clock() - start)
 
 	if LOWSPEED:
-	    time.sleep(1)
+	    time.sleep(1.5)
 
     	if cv.WaitKey(10) == 27:
 	    break
