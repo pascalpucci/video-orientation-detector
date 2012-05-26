@@ -260,7 +260,7 @@ if __name__ == '__main__':
 
     # Check File Presence 
     if not os.path.isfile(input_name):
-	sys.stderr.write("\n%s is not a file. Please give file as argument.\n\n" % input_name)
+	sys.stderr.write("\n%s is not present. Please give file as argument.\n\n" % input_name)
 	parser.print_help()
 	sys.exit(1)
     
@@ -355,6 +355,8 @@ if __name__ == '__main__':
     
     if VIEW:
 	cv.DestroyAllWindows()
+	if LOWSPEED:
+	    time.sleep(3)
 
     output=''
     if winner=="Rotation 90":
