@@ -333,7 +333,7 @@ if __name__ == '__main__':
 	    lowtxt = " - LOWSPEED ENABLED"
 
 	if not VERYQUIET:
-	    sys.stderr.write("File: %s - %sSuccess: %i/100%s - Rest Time: %is - %sDetection: %s%s %s\n" % (input_name,bcolors.YELLOW,successfullpourcent,bcolors.ENDC,resttime,bcolors.GREEN,winner,bcolors.ENDC,lowtxt))
+	    sys.stderr.write("File: %s - %sSuccess: %i/100%s - Rest Time: %is - %sOrientation: %s%s %s\n" % (input_name,bcolors.YELLOW,successfullpourcent,bcolors.ENDC,resttime,bcolors.GREEN,winner,bcolors.ENDC,lowtxt))
 
 	try:	
 	    image = cv.QueryFrame(capture)
