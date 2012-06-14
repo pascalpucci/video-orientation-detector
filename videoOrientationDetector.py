@@ -291,10 +291,10 @@ if __name__ == '__main__':
 
     # One Thread per rotation
     image = cv.QueryFrame(capture)
-    image90 = cv.CreateImage((image.width,image.height),image.depth,image.channels);
-    image270 = cv.CreateImage((image.width,image.height),image.depth,image.channels);
-    cv.Copy(image,image90);
-    cv.Copy(image,image270);
+    image90 = cv.CreateImage((image.width,image.height),image.depth,image.channels)
+    image270 = cv.CreateImage((image.width,image.height),image.depth,image.channels)
+    cv.Copy(image,image90)
+    cv.Copy(image,image270)
 
     emoy = 0
     frame = 0
