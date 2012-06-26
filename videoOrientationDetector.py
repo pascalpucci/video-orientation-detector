@@ -38,7 +38,7 @@ import numpy as np
 
 # haar files
 path_haarfile = '/usr/share/opencv/haarcascades/'
-haar_face = '%s/haarcascade_frontalface_default.xml' % path_haarfile
+haar_face = '%s/haarcascade_frontalface_alt2.xml' % path_haarfile
 haar_eye = '%s/haarcascade_eye.xml' % path_haarfile
 haar_mouth = '%s/haarcascade_mcs_mouth.xml' % path_haarfile
 haar_eyepair = '%s/haarcascade_mcs_eyepair_small.xml' % path_haarfile
